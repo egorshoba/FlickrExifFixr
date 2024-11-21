@@ -98,7 +98,6 @@ class Program
         {
             var imageFile = ImageFile.FromFile(filePath);
 
-            imageFile.Properties[ExifTag.DateTimeOriginal] = new ExifDateTime(ExifTag.DateTimeOriginal, dateTaken);
             // Правильный способ установки даты съёмки
             imageFile.Properties.Set(ExifTag.DateTimeOriginal, dateTaken);
             imageFile.Properties.Set(ExifTag.DateTimeDigitized, dateTaken);
